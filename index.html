@@ -1,780 +1,1315 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta property="og:title" content="김민준 ♥ 이서연 결혼합니다">
-  <meta property="og:description" content="2026년 9월 19일 토요일 오전 11시 · 그랜드 인터컨티넨탈 서울 파르나스">
-  <meta property="og:type" content="website">
-  <title>김민준 ♥ 이서연</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:title" content="이현택♡이세영의 모바일청첩장">
+<meta property="og:description" content="2026년 9월 19일 토요일 오전 11시 · 그랜드 인터컨티넨탈 서울 파르나스">
+<meta property="og:image" content="">
+<meta property="og:type" content="article">
+<title>이현택♡이세영의 모바일청첩장입니다</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+KR:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { overflow-x: hidden; }
+body {
+  background: #e8e0d8;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 300;
+  color: #3a2e2e;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { border: 0; display: block; }
 
-    html { scroll-behavior: smooth; }
+/* ── WRAPPER ── */
+#wrapper {
+  width: 100%;
+  max-width: 430px;
+  margin: 28px auto;
+  background: #fdf8f5;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 4px 4px 20px rgba(0,0,0,0.18);
+}
 
-    body {
-      background: #f0e8e0;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      font-family: 'Noto Serif KR', serif;
-    }
+/* ── HERO ── */
+.hero {
+  position: relative;
+  background: #f2e8e0;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 52px;
+  overflow: hidden;
+}
+.hero-floral {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  pointer-events: none;
+}
+.hero-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.hero-title .en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: #9e7b6a;
+  display: block;
+  margin-bottom: 14px;
+}
+.hero-title .names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 300;
+  font-style: italic;
+  color: #5c3d35;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.hero-title .names span { color: #c47d68; }
+.hero-title .kr-names {
+  font-size: 14px;
+  font-weight: 300;
+  color: #7a5c52;
+  letter-spacing: 0.22em;
+  margin-top: 14px;
+  display: block;
+}
 
-    .inv-wrap {
-      width: 100%;
-      max-width: 430px;
-      background: #fdf8f5;
-      min-height: 100vh;
-      position: relative;
-    }
+/* ── BGM BAR ── */
+#bgm-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: #f7f0eb;
+  border-bottom: 0.5px solid #e8d9d0;
+}
+#bgm-btn {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 0.5px solid #c47d68;
+  background: transparent;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+#bgm-btn svg { width: 10px; height: 10px; fill: #c47d68; }
+#bgm-info { flex: 1; }
+#bgm-song { font-size: 11px; color: #5c3d35; letter-spacing: 0.05em; }
+#bgm-artist { font-size: 10px; color: #9e7b6a; letter-spacing: 0.04em; margin-top: 2px; }
+#bgm-progress {
+  height: 2px;
+  background: #e8d9d0;
+  border-radius: 2px;
+  margin-top: 5px;
+  position: relative;
+  overflow: hidden;
+}
+#bgm-played {
+  height: 100%;
+  width: 0%;
+  background: #c47d68;
+  border-radius: 2px;
+  transition: width 1s linear;
+}
 
-    /* ── HERO ── */
-    .hero {
-      position: relative;
-      height: 540px;
-      background: #f5ede6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding-bottom: 52px;
-      overflow: hidden;
-    }
+/* ── SECTION COMMON ── */
+.section {
+  border-top: 0.5px solid #e8d9d0;
+}
+.section-header {
+  padding: 10px 24px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.sh-invit {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-style: italic;
+  color: #c47d68;
+  letter-spacing: 0.2em;
+}
+.sh-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  color: #b4a090;
+  letter-spacing: 0.1em;
+}
+.sh-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: #5c3d35;
+  font-weight: 300;
+  margin-left: auto;
+}
+.section-title-row {
+  padding: 18px 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title-row .title-deco {
+  width: 22px; height: 22px; flex-shrink: 0;
+}
+.section-title-row .title-text {
+  font-size: 18px;
+  font-weight: 300;
+  color: #5c3d35;
+  letter-spacing: 0.08em;
+}
+.section-body {
+  padding: 20px 24px 32px;
+}
+.section-body-radius {
+  margin: 16px 14px 28px;
+  background: #fff9f6;
+  border-radius: 16px;
+  border: 0.5px solid #e8d9d0;
+  padding: 20px;
+}
 
-    .hero-svg {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 430px;
-    }
+/* ── 인사말 ── */
+.insa-text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.2;
+  color: #5c4a44;
+  letter-spacing: 0.05em;
+  word-break: keep-all;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.family-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.family-card {
+  background: #f9f2ee;
+  border-radius: 10px;
+  border: 0.5px solid #e8d9d0;
+  padding: 14px;
+}
+.family-card .side-label {
+  font-size: 10px;
+  color: #c47d68;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+}
+.family-card .fnames {
+  font-size: 12px;
+  font-weight: 300;
+  color: #5c4a44;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+.family-card .fnames em { color: #9e7b6a; font-style: normal; }
 
-    .hero-title {
-      position: relative;
-      text-align: center;
-      z-index: 2;
-    }
+/* ── 축하연락처 ── */
+.contact-group {
+  margin-bottom: 18px;
+}
+.contact-group:last-child { margin-bottom: 0; }
+.contact-group-label {
+  font-size: 11px;
+  color: #c47d68;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  background: #f9f2ee;
+  border-radius: 10px;
+  border: 0.5px solid #e8d9d0;
+  margin-bottom: 6px;
+}
+.contact-row:last-child { margin-bottom: 0; }
+.contact-name { flex: 1; font-size: 13px; color: #5c3d35; letter-spacing: 0.06em; }
+.contact-name span { color: #9e7b6a; font-size: 11px; margin-right: 6px; }
+.contact-btns { display: flex; gap: 6px; }
+.contact-icon {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 0.5px solid #d4a090;
+  display: flex; align-items: center; justify-content: center;
+  color: #c47d68;
+  font-size: 13px;
+  text-decoration: none;
+}
 
-    .hero-title .en {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 12px;
-      font-weight: 300;
-      letter-spacing: 0.3em;
-      color: #9e7b6a;
-      display: block;
-      margin-bottom: 16px;
-    }
+/* ── 달력 ── */
+.calendar-wrap {
+  text-align: center;
+}
+.calendar-ym {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #5c3d35;
+  letter-spacing: 0.15em;
+  margin-bottom: 14px;
+}
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.calendar-table th {
+  color: #9e7b6a;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 6px 0;
+  width: calc(100% / 7);
+}
+.calendar-table th:first-child { color: #c47d68; }
+.calendar-table th:last-child { color: #9ab0c4; }
+.calendar-table td {
+  padding: 7px 0;
+  font-weight: 300;
+  color: #5c4a44;
+  text-align: center;
+  font-size: 13px;
+}
+.calendar-table td:first-child { color: #c47d68; }
+.calendar-table td:last-child { color: #9ab0c4; }
+.calendar-table td.dday {
+  position: relative;
+}
+.calendar-table td.dday span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: #c47d68;
+  color: #fff;
+  font-size: 13px;
+}
+.dday-label {
+  font-size: 11px;
+  color: #c47d68;
+  letter-spacing: 0.15em;
+  margin-top: 12px;
+}
 
-    .hero-title .names {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 50px;
-      font-weight: 300;
-      font-style: italic;
-      color: #5c3d35;
-      letter-spacing: 0.04em;
-      line-height: 1;
-    }
+/* ── 갤러리 ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin: 0 0 24px;
+}
+.g-photo {
+  background: #e2d0c6;
+  overflow: hidden;
+  cursor: pointer;
+}
+.g-photo.wide { grid-column: span 2; aspect-ratio: 16/7; }
+.g-photo.tall { aspect-ratio: 3/4; }
+.g-photo img { width: 100%; height: 100%; object-fit: cover; }
+.g-photo svg { width: 100%; height: 100%; display: block; }
+.gallery-note {
+  text-align: center;
+  font-size: 12px;
+  color: #b4a090;
+  letter-spacing: 0.04em;
+  line-height: 1.9;
+  padding: 0 24px 28px;
+}
 
-    .hero-title .names span { color: #c47d68; }
+/* ── 지도 ── */
+.map-address-block {
+  padding: 0 24px 16px;
+}
+.map-venue-name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #5c3d35;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+}
+.map-road {
+  font-size: 12px;
+  font-weight: 300;
+  color: #9e7b6a;
+  letter-spacing: 0.03em;
+  line-height: 1.8;
+}
+.map-tel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 0.5px solid #c47d68;
+  color: #c47d68;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+.map-box {
+  margin: 0 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 0.5px solid #e8d9d0;
+}
+.map-inner {
+  height: 200px;
+  background: #ede4dc;
+  position: relative;
+}
+.map-inner svg { width: 100%; height: 100%; }
+.map-tab-row {
+  display: flex;
+  border-bottom: 0.5px solid #e8d9d0;
+}
+.map-tab {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #9e7b6a;
+  cursor: pointer;
+  background: #fdf8f5;
+  border: none;
+  letter-spacing: 0.05em;
+}
+.map-tab.active {
+  color: #c47d68;
+  border-bottom: 2px solid #c47d68;
+}
+.map-navi-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 0;
+  background: #fdf8f5;
+}
+.navi-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.navi-icon {
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.navi-label {
+  font-size: 10px;
+  color: #9e7b6a;
+  letter-spacing: 0.05em;
+}
+.transport-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 14px 14px 28px;
+}
+.t-card {
+  background: #f9f2ee;
+  border-radius: 10px;
+  padding: 12px;
+  border: 0.5px solid #e8d9d0;
+}
+.t-type {
+  font-size: 11px;
+  color: #c47d68;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+.t-desc {
+  font-size: 11px;
+  color: #5c4a44;
+  font-weight: 300;
+  line-height: 1.9;
+}
 
-    .hero-title .kr-names {
-      font-size: 15px;
-      font-weight: 300;
-      color: #7a5c52;
-      letter-spacing: 0.22em;
-      margin-top: 14px;
-      display: block;
-    }
+/* ── 안내사항 ── */
+.notice-list { padding: 0; }
+.notice-row {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 0.5px solid #f0e8e0;
+  align-items: flex-start;
+}
+.notice-row:last-child { border-bottom: none; }
+.notice-no {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #e0c8bc;
+  letter-spacing: 0.02em;
+  min-width: 28px;
+  line-height: 1;
+  padding-top: 2px;
+}
+.notice-content {}
+.notice-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #5c3d35;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.notice-msg {
+  font-size: 12px;
+  font-weight: 300;
+  color: #7a6058;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  word-break: keep-all;
+}
 
-    /* ── TAB NAV ── */
-    .tab-nav {
-      display: flex;
-      background: #fdf8f5;
-      border-bottom: 0.5px solid #e8d9d0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+/* ── 계좌번호 ── */
+.bank-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: #7a6058;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  word-break: keep-all;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.bank-group {
+  margin-bottom: 14px;
+}
+.bank-group-label {
+  font-size: 11px;
+  color: #c47d68;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+.bank-row {
+  border: 0.5px solid #e8d9d0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.bank-row:last-child { margin-bottom: 0; }
+.bank-row-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  background: #f9f2ee;
+  cursor: pointer;
+  user-select: none;
+}
+.bank-name-col { flex: 1; font-size: 13px; color: #5c3d35; letter-spacing: 0.05em; }
+.bank-name-col span { color: #9e7b6a; font-size: 11px; margin-right: 6px; }
+.bank-arrow {
+  width: 16px; height: 16px;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.25s;
+}
+.bank-arrow svg { width: 10px; height: 10px; stroke: #c47d68; fill: none; }
+.bank-row.open .bank-arrow { transform: rotate(180deg); }
+.bank-detail {
+  display: none;
+  padding: 12px 14px;
+  background: #fff9f6;
+  border-top: 0.5px solid #e8d9d0;
+}
+.bank-row.open .bank-detail { display: flex; align-items: center; gap: 10px; }
+.bank-info { flex: 1; }
+.bank-info .bank-label {
+  font-size: 11px;
+  color: #9e7b6a;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+.bank-info .bank-num {
+  font-size: 14px;
+  color: #5c3d35;
+  letter-spacing: 0.08em;
+}
+.bank-copy-btn {
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 0.5px solid #c47d68;
+  background: transparent;
+  color: #c47d68;
+  font-size: 11px;
+  font-family: 'Noto Serif KR', serif;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.bank-copy-btn.copied {
+  background: #c47d68;
+  color: #fff;
+}
 
-    .tab-btn {
-      flex: 1;
-      padding: 15px 0;
-      border: none;
-      background: transparent;
-      font-family: 'Noto Serif KR', serif;
-      font-size: 13px;
-      font-weight: 300;
-      color: #9e7b6a;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-    }
+/* ── 소식공유 ── */
+.share-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 0 4px;
+}
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 100px;
+  background: #5c3d35;
+  color: #f5ede6;
+  font-size: 12px;
+  font-family: 'Noto Serif KR', serif;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+}
+.share-btn svg { width: 16px; height: 16px; }
 
-    .tab-btn.active {
-      color: #c47d68;
-      border-bottom-color: #c47d68;
-    }
+/* ── FOOTER ── */
+.inv-footer {
+  background: #5c3d35;
+  padding: 40px 28px;
+  text-align: center;
+}
+.inv-footer .f-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  color: #f5ede6;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.inv-footer .f-date {
+  font-size: 11px;
+  font-weight: 300;
+  color: #d4a090;
+  letter-spacing: 0.22em;
+}
 
-    /* ── TAB CONTENT ── */
-    .tab-pane { display: none; }
-    .tab-pane.active { display: block; }
-
-    /* ── SECTIONS ── */
-    .section {
-      padding: 44px 28px;
-      text-align: center;
-    }
-
-    .section + .section {
-      border-top: 0.5px solid #e8d9d0;
-    }
-
-    .section-label {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 11px;
-      letter-spacing: 0.3em;
-      color: #c47d68;
-      margin-bottom: 20px;
-    }
-
-    /* ── DATE BLOCK ── */
-    .date-block {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 56px;
-      font-weight: 300;
-      color: #5c3d35;
-      line-height: 1;
-    }
-
-    .date-block .year {
-      font-size: 15px;
-      display: block;
-      letter-spacing: 0.18em;
-      color: #9e7b6a;
-      margin-bottom: 6px;
-    }
-
-    .date-block .day-kr {
-      font-size: 14px;
-      font-family: 'Noto Serif KR', serif;
-      font-weight: 300;
-      color: #9e7b6a;
-      letter-spacing: 0.15em;
-      margin-top: 10px;
-      display: block;
-    }
-
-    .time-venue {
-      margin-top: 24px;
-      font-size: 14px;
-      font-weight: 300;
-      color: #7a5c52;
-      line-height: 2.1;
-      letter-spacing: 0.05em;
-    }
-
-    /* ── FLORAL DIVIDER ── */
-    .floral-div {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 0 0 6px;
-    }
-
-    .floral-div::before,
-    .floral-div::after {
-      content: '';
-      flex: 1;
-      height: 0.5px;
-      background: #e8d9d0;
-    }
-
-    /* ── INVITE TEXT ── */
-    .invite-text {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 2.2;
-      color: #5c4a44;
-      letter-spacing: 0.05em;
-      word-break: keep-all;
-      margin-top: 20px;
-    }
-
-    /* ── HOST CARDS ── */
-    .host-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 8px;
-      text-align: left;
-    }
-
-    .host-card {
-      padding: 16px;
-      background: #f9f2ee;
-      border-radius: 12px;
-      border: 0.5px solid #e8d9d0;
-    }
-
-    .host-card .side {
-      font-size: 11px;
-      color: #c47d68;
-      letter-spacing: 0.15em;
-      margin-bottom: 8px;
-    }
-
-    .host-card .names-txt {
-      font-size: 13px;
-      font-weight: 300;
-      color: #5c4a44;
-      line-height: 2;
-      letter-spacing: 0.04em;
-    }
-
-    .host-card .names-txt em {
-      color: #9e7b6a;
-      font-style: normal;
-    }
-
-    /* ── QR SECTION ── */
-    .qr-section {
-      padding: 36px 28px;
-      text-align: center;
-      border-top: 0.5px solid #e8d9d0;
-    }
-
-    .qr-box {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      padding: 28px 32px;
-      background: #f9f2ee;
-      border-radius: 16px;
-      border: 0.5px solid #e8d9d0;
-    }
-
-    .qr-placeholder {
-      width: 120px;
-      height: 120px;
-      background: white;
-      border-radius: 8px;
-      border: 0.5px solid #e8d9d0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .qr-label {
-      font-size: 12px;
-      font-weight: 300;
-      color: #9e7b6a;
-      letter-spacing: 0.1em;
-      line-height: 1.8;
-    }
-
-    /* ── GALLERY ── */
-    .gallery-header {
-      padding: 36px 28px 20px;
-      text-align: center;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3px;
-    }
-
-    .photo {
-      background: #e8d4cb;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .photo.tall { aspect-ratio: 3/4; }
-    .photo.wide { grid-column: span 2; aspect-ratio: 16/7; }
-
-    .photo svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .gallery-footer {
-      padding: 20px 28px 40px;
-      text-align: center;
-    }
-
-    .gallery-note {
-      font-size: 12px;
-      font-weight: 300;
-      color: #b4a09a;
-      letter-spacing: 0.05em;
-      line-height: 1.9;
-    }
-
-    /* ── LOCATION ── */
-    .loc-header {
-      padding: 36px 28px 20px;
-      text-align: center;
-    }
-
-    .loc-name {
-      font-size: 16px;
-      font-weight: 400;
-      color: #5c3d35;
-      letter-spacing: 0.05em;
-      margin-bottom: 6px;
-    }
-
-    .loc-addr {
-      font-size: 13px;
-      font-weight: 300;
-      color: #9e7b6a;
-      letter-spacing: 0.03em;
-      line-height: 1.9;
-    }
-
-    .map-wrap {
-      padding: 0 20px;
-    }
-
-    .map-box {
-      border-radius: 14px;
-      overflow: hidden;
-      border: 0.5px solid #e8d9d0;
-    }
-
-    .map-inner {
-      height: 210px;
-      background: #ede4dc;
-      position: relative;
-    }
-
-    .map-inner svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .map-footer {
-      padding: 16px 20px;
-      background: #fdf8f5;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .map-footer-txt {
-      font-size: 13px;
-      font-weight: 300;
-      color: #5c4a44;
-      letter-spacing: 0.04em;
-    }
-
-    .map-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 8px 16px;
-      border-radius: 100px;
-      border: 0.5px solid #c47d68;
-      background: transparent;
-      color: #c47d68;
-      font-size: 12px;
-      font-family: 'Noto Serif KR', serif;
-      letter-spacing: 0.06em;
-      cursor: pointer;
-      font-weight: 300;
-      text-decoration: none;
-    }
-
-    .transport-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      padding: 16px 20px 40px;
-    }
-
-    .t-card {
-      background: #f9f2ee;
-      border-radius: 10px;
-      padding: 14px;
-      border: 0.5px solid #e8d9d0;
-    }
-
-    .t-type {
-      font-size: 11px;
-      color: #c47d68;
-      letter-spacing: 0.14em;
-      margin-bottom: 7px;
-    }
-
-    .t-desc {
-      font-size: 12px;
-      color: #5c4a44;
-      font-weight: 300;
-      line-height: 1.9;
-      letter-spacing: 0.03em;
-    }
-
-    /* ── FOOTER ── */
-    .inv-footer {
-      background: #5c3d35;
-      padding: 44px 28px;
-      text-align: center;
-    }
-
-    .inv-footer .f-en {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      font-style: italic;
-      font-weight: 300;
-      color: #f5ede6;
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-    }
-
-    .inv-footer .f-date {
-      font-size: 12px;
-      font-weight: 300;
-      color: #d4a090;
-      letter-spacing: 0.2em;
-    }
-  </style>
+/* ── TOAST ── */
+#toast {
+  position: fixed;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(60,30,20,0.88);
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 22px;
+  border-radius: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  white-space: nowrap;
+  z-index: 999;
+  font-family: 'Noto Serif KR', serif;
+  letter-spacing: 0.05em;
+}
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+</style>
 </head>
 <body>
-<div class="inv-wrap">
 
-  <!-- HERO -->
+<div id="wrapper">
+
+  <!-- ── HERO ── -->
   <div class="hero">
-    <svg class="hero-svg" viewBox="0 0 430 540" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet">
-      <!-- stems -->
-      <g opacity="0.65">
-        <ellipse cx="215" cy="8" rx="3" ry="60" fill="#e0b8a0" transform="rotate(-4 215 8)"/>
-        <ellipse cx="200" cy="6" rx="2.5" ry="52" fill="#d0a890" transform="rotate(-22 200 6)"/>
-        <ellipse cx="230" cy="6" rx="2.5" ry="52" fill="#d0a890" transform="rotate(17 230 6)"/>
-        <ellipse cx="185" cy="10" rx="2" ry="40" fill="#c8a080" transform="rotate(-38 185 10)"/>
-        <ellipse cx="248" cy="10" rx="2" ry="40" fill="#c8a080" transform="rotate(32 248 10)"/>
+    <svg class="hero-floral" viewBox="0 0 430 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+      <g opacity="0.62">
+        <ellipse cx="215" cy="6" rx="3" ry="62" fill="#e0b8a0" transform="rotate(-4 215 6)"/>
+        <ellipse cx="198" cy="5" rx="2.5" ry="54" fill="#d0a890" transform="rotate(-23 198 5)"/>
+        <ellipse cx="232" cy="5" rx="2.5" ry="54" fill="#d0a890" transform="rotate(18 232 5)"/>
+        <ellipse cx="182" cy="8" rx="2" ry="42" fill="#c8a080" transform="rotate(-38 182 8)"/>
+        <ellipse cx="250" cy="8" rx="2" ry="42" fill="#c8a080" transform="rotate(33 250 8)"/>
       </g>
-      <!-- large center rose -->
-      <g transform="translate(215,90)">
-        <circle cx="0" cy="0" r="28" fill="#f0bfaf" opacity="0.85"/>
-        <circle cx="0" cy="0" r="10" fill="#e09080" opacity="0.9"/>
-        <ellipse cx="-22" cy="-10" rx="16" ry="11" fill="#f0bfaf" opacity="0.75" transform="rotate(-28)"/>
-        <ellipse cx="22" cy="-10" rx="16" ry="11" fill="#f0bfaf" opacity="0.75" transform="rotate(28)"/>
-        <ellipse cx="0" cy="-25" rx="11" ry="17" fill="#f0bfaf" opacity="0.75"/>
-        <ellipse cx="-18" cy="16" rx="16" ry="11" fill="#f0bfaf" opacity="0.72" transform="rotate(22)"/>
-        <ellipse cx="18" cy="16" rx="16" ry="11" fill="#f0bfaf" opacity="0.72" transform="rotate(-22)"/>
+      <g transform="translate(215,88)">
+        <circle cx="0" cy="0" r="30" fill="#f0bfaf" opacity="0.82"/>
+        <circle cx="0" cy="0" r="11" fill="#e09080" opacity="0.88"/>
+        <ellipse cx="-23" cy="-10" rx="17" ry="12" fill="#f0bfaf" opacity="0.74" transform="rotate(-28)"/>
+        <ellipse cx="23" cy="-10" rx="17" ry="12" fill="#f0bfaf" opacity="0.74" transform="rotate(28)"/>
+        <ellipse cx="0" cy="-27" rx="12" ry="18" fill="#f0bfaf" opacity="0.74"/>
+        <ellipse cx="-19" cy="17" rx="17" ry="12" fill="#f0bfaf" opacity="0.70" transform="rotate(22)"/>
+        <ellipse cx="19" cy="17" rx="17" ry="12" fill="#f0bfaf" opacity="0.70" transform="rotate(-22)"/>
       </g>
-      <!-- left rose -->
-      <g transform="translate(90,72)">
-        <circle cx="0" cy="0" r="20" fill="#f5d0c0" opacity="0.78"/>
-        <circle cx="0" cy="0" r="7" fill="#e09878" opacity="0.9"/>
-        <ellipse cx="-16" cy="-7" rx="13" ry="9" fill="#f5d0c0" opacity="0.72" transform="rotate(-30)"/>
-        <ellipse cx="16" cy="-7" rx="13" ry="9" fill="#f5d0c0" opacity="0.72" transform="rotate(30)"/>
-        <ellipse cx="0" cy="-19" rx="9" ry="13" fill="#f5d0c0" opacity="0.72"/>
-        <ellipse cx="-13" cy="13" rx="13" ry="9" fill="#f5d0c0" opacity="0.7" transform="rotate(22)"/>
-        <ellipse cx="13" cy="13" rx="13" ry="9" fill="#f5d0c0" opacity="0.7" transform="rotate(-22)"/>
+      <g transform="translate(88,70)">
+        <circle cx="0" cy="0" r="21" fill="#f5d0c0" opacity="0.76"/>
+        <circle cx="0" cy="0" r="7.5" fill="#e09878" opacity="0.88"/>
+        <ellipse cx="-17" cy="-7" rx="14" ry="9.5" fill="#f5d0c0" opacity="0.70" transform="rotate(-30)"/>
+        <ellipse cx="17" cy="-7" rx="14" ry="9.5" fill="#f5d0c0" opacity="0.70" transform="rotate(30)"/>
+        <ellipse cx="0" cy="-20" rx="9.5" ry="14" fill="#f5d0c0" opacity="0.70"/>
+        <ellipse cx="-14" cy="14" rx="14" ry="9.5" fill="#f5d0c0" opacity="0.68" transform="rotate(22)"/>
+        <ellipse cx="14" cy="14" rx="14" ry="9.5" fill="#f5d0c0" opacity="0.68" transform="rotate(-22)"/>
       </g>
-      <!-- right rose -->
-      <g transform="translate(338,62)">
-        <circle cx="0" cy="0" r="22" fill="#fae0d4" opacity="0.78"/>
-        <circle cx="0" cy="0" r="8" fill="#e09878" opacity="0.88"/>
-        <ellipse cx="-18" cy="-8" rx="14" ry="10" fill="#fae0d4" opacity="0.72" transform="rotate(-28)"/>
-        <ellipse cx="18" cy="-8" rx="14" ry="10" fill="#fae0d4" opacity="0.72" transform="rotate(28)"/>
-        <ellipse cx="0" cy="-21" rx="10" ry="14" fill="#fae0d4" opacity="0.72"/>
-        <ellipse cx="-15" cy="15" rx="14" ry="10" fill="#fae0d4" opacity="0.7" transform="rotate(20)"/>
-        <ellipse cx="15" cy="15" rx="14" ry="10" fill="#fae0d4" opacity="0.7" transform="rotate(-20)"/>
+      <g transform="translate(340,62)">
+        <circle cx="0" cy="0" r="23" fill="#fae0d4" opacity="0.76"/>
+        <circle cx="0" cy="0" r="8.5" fill="#e09878" opacity="0.86"/>
+        <ellipse cx="-19" cy="-8" rx="15" ry="10.5" fill="#fae0d4" opacity="0.70" transform="rotate(-28)"/>
+        <ellipse cx="19" cy="-8" rx="15" ry="10.5" fill="#fae0d4" opacity="0.70" transform="rotate(28)"/>
+        <ellipse cx="0" cy="-22" rx="10.5" ry="15" fill="#fae0d4" opacity="0.70"/>
+        <ellipse cx="-16" cy="16" rx="15" ry="10.5" fill="#fae0d4" opacity="0.68" transform="rotate(20)"/>
+        <ellipse cx="16" cy="16" rx="15" ry="10.5" fill="#fae0d4" opacity="0.68" transform="rotate(-20)"/>
       </g>
-      <!-- small buds -->
-      <g transform="translate(155,118)">
-        <circle cx="0" cy="0" r="12" fill="#fdeae2" opacity="0.8"/>
-        <circle cx="0" cy="0" r="4" fill="#d49080" opacity="0.9"/>
-        <ellipse cx="-9" cy="-4" rx="8" ry="5" fill="#fdeae2" opacity="0.7" transform="rotate(-30)"/>
-        <ellipse cx="9" cy="-4" rx="8" ry="5" fill="#fdeae2" opacity="0.7" transform="rotate(30)"/>
-        <ellipse cx="0" cy="-11" rx="5" ry="8" fill="#fdeae2" opacity="0.7"/>
+      <g transform="translate(154,116)">
+        <circle cx="0" cy="0" r="13" fill="#fdeae2" opacity="0.78"/>
+        <circle cx="0" cy="0" r="4.5" fill="#d49080" opacity="0.88"/>
+        <ellipse cx="-10" cy="-4" rx="8.5" ry="5.5" fill="#fdeae2" opacity="0.68" transform="rotate(-30)"/>
+        <ellipse cx="10" cy="-4" rx="8.5" ry="5.5" fill="#fdeae2" opacity="0.68" transform="rotate(30)"/>
+        <ellipse cx="0" cy="-12" rx="5.5" ry="8.5" fill="#fdeae2" opacity="0.68"/>
       </g>
-      <g transform="translate(278,105)">
-        <circle cx="0" cy="0" r="10" fill="#fde8de" opacity="0.8"/>
-        <circle cx="0" cy="0" r="4" fill="#d49080" opacity="0.88"/>
-        <ellipse cx="-8" cy="-4" rx="7" ry="5" fill="#fde8de" opacity="0.7" transform="rotate(-30)"/>
-        <ellipse cx="8" cy="-4" rx="7" ry="5" fill="#fde8de" opacity="0.7" transform="rotate(30)"/>
-        <ellipse cx="0" cy="-10" rx="5" ry="7" fill="#fde8de" opacity="0.7"/>
+      <g transform="translate(278,104)">
+        <circle cx="0" cy="0" r="11" fill="#fde8de" opacity="0.78"/>
+        <circle cx="0" cy="0" r="4" fill="#d49080" opacity="0.86"/>
+        <ellipse cx="-8.5" cy="-4" rx="7.5" ry="5" fill="#fde8de" opacity="0.68" transform="rotate(-30)"/>
+        <ellipse cx="8.5" cy="-4" rx="7.5" ry="5" fill="#fde8de" opacity="0.68" transform="rotate(30)"/>
+        <ellipse cx="0" cy="-10.5" rx="5" ry="7.5" fill="#fde8de" opacity="0.68"/>
       </g>
-      <!-- leaves -->
-      <g fill="#c8a882" opacity="0.55">
-        <ellipse cx="55" cy="148" rx="22" ry="6" transform="rotate(-42 55 148)"/>
-        <ellipse cx="65" cy="138" rx="18" ry="5" transform="rotate(-58 65 138)"/>
-        <ellipse cx="372" cy="135" rx="20" ry="5" transform="rotate(38 372 135)"/>
-        <ellipse cx="362" cy="122" rx="16" ry="4" transform="rotate(52 362 122)"/>
-        <ellipse cx="240" cy="158" rx="17" ry="4" transform="rotate(-18 240 158)"/>
-        <ellipse cx="140" cy="168" rx="18" ry="5" transform="rotate(28 140 168)"/>
-        <ellipse cx="295" cy="170" rx="15" ry="4" transform="rotate(-30 295 170)"/>
+      <g fill="#c8a882" opacity="0.52">
+        <ellipse cx="52" cy="150" rx="23" ry="6" transform="rotate(-42 52 150)"/>
+        <ellipse cx="63" cy="139" rx="19" ry="5" transform="rotate(-58 63 139)"/>
+        <ellipse cx="374" cy="136" rx="21" ry="5.5" transform="rotate(38 374 136)"/>
+        <ellipse cx="363" cy="123" rx="17" ry="4.5" transform="rotate(52 363 123)"/>
+        <ellipse cx="242" cy="160" rx="18" ry="4.5" transform="rotate(-18 242 160)"/>
+        <ellipse cx="138" cy="170" rx="19" ry="5" transform="rotate(28 138 170)"/>
+        <ellipse cx="296" cy="172" rx="16" ry="4" transform="rotate(-30 296 172)"/>
       </g>
-      <!-- scattered petals -->
-      <g fill="#e8c0a8" opacity="0.45">
-        <circle cx="38" cy="105" r="5"/>
-        <circle cx="390" cy="92" r="4"/>
-        <circle cx="260" cy="178" r="4.5"/>
-        <circle cx="110" cy="195" r="3.5"/>
-        <circle cx="72" cy="48" r="3.5"/>
-        <circle cx="355" cy="178" r="5"/>
-        <circle cx="188" cy="208" r="2.5"/>
-        <circle cx="320" cy="48" r="3"/>
-        <circle cx="170" cy="52" r="2"/>
+      <g fill="#e8c0a8" opacity="0.42">
+        <circle cx="36" cy="108" r="5.5"/>
+        <circle cx="392" cy="94" r="4.5"/>
+        <circle cx="262" cy="180" r="5"/>
+        <circle cx="108" cy="198" r="4"/>
+        <circle cx="70" cy="46" r="4"/>
+        <circle cx="357" cy="180" r="5.5"/>
+        <circle cx="186" cy="210" r="3"/>
+        <circle cx="322" cy="46" r="3.5"/>
       </g>
     </svg>
-
     <div class="hero-title">
       <span class="en">WEDDING INVITATION</span>
       <div class="names">Kim <span>&amp;</span> Lee</div>
-      <span class="kr-names">김민준 · 이서연</span>
+      <span class="kr-names">이현택 · 이세영</span>
     </div>
   </div>
 
-  <!-- TAB NAV -->
-  <nav class="tab-nav" role="tablist" aria-label="청첩장 섹션">
-    <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab('invite', this)">청첩장</button>
-    <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('gallery', this)">갤러리</button>
-    <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('location', this)">오시는 길</button>
-  </nav>
-
-  <!-- TAB: 청첩장 -->
-  <div id="pane-invite" class="tab-pane active" role="tabpanel">
-
-    <div class="section">
-      <div class="section-label">— 혼인 예식에 초대합니다 —</div>
-      <div class="date-block">
-        <span class="year">2026</span>
-        09.19
-        <span class="day-kr">토요일 오전 11시</span>
-      </div>
-      <div class="time-venue">
-        그랜드 인터컨티넨탈 서울 파르나스<br>
-        그랜드볼룸 3층
-      </div>
+  <!-- ── BGM ── -->
+  <div id="bgm-bar">
+    <button id="bgm-btn" onclick="toggleBgm()" aria-label="음악 재생/정지">
+      <svg id="bgm-icon-play" viewBox="0 0 10 12"><polygon points="1,0 10,6 1,12" fill="#c47d68"/></svg>
+      <svg id="bgm-icon-pause" viewBox="0 0 10 12" style="display:none"><rect x="0" y="0" width="3.5" height="12" fill="#c47d68"/><rect x="6.5" y="0" width="3.5" height="12" fill="#c47d68"/></svg>
+    </button>
+    <div id="bgm-info">
+      <div id="bgm-song">Starry Eyed</div>
+      <div id="bgm-artist">Ziv Moran</div>
+      <div id="bgm-progress"><div id="bgm-played"></div></div>
     </div>
+  </div>
+  <audio id="bgm-audio" loop>
+    <source src="https://mcard1.bojagicard.com/audio/Starry Eyed - Ziv Moran.mp3" type="audio/mpeg">
+  </audio>
 
-    <div class="section">
-      <div class="floral-div">
-        <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
-          <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
-          <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
-          <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
-          <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
-        </svg>
-      </div>
-      <p class="invite-text">
-        서로가 마주 보며 다져온 사랑을<br>
-        이제 함께 한 곳을 바라보며<br>
-        걸어가고자 합니다.<br><br>
-        저희 두 사람이 사랑으로 하나 되는 날,<br>
-        오셔서 축복해 주시면<br>
-        더없는 기쁨이 되겠습니다.
+  <!-- ── 1. 인사말 ── -->
+  <div class="section" id="sec-insa">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
+    </div>
+    <div class="section-title-row">
+      <svg class="title-deco" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">결혼합니다.</span>
+    </div>
+    <div class="section-body-radius">
+      <p class="insa-text">
+        두 사람이 사랑으로 만나<br>
+        진실과 이해로써 하나를 이루려 합니다.<br>
+        이 두 사람을 지성으로 아끼고 돌봐주신<br>
+        여러 어른과 친지분들을 모시고<br>
+        서약을 맺고자 하오니<br>
+        바쁘신 가운데 두 사람의 장래를<br>
+        가까이에서 축복해 주시면 고맙겠습니다.
       </p>
-    </div>
-
-    <div class="section">
-      <div class="section-label">혼주</div>
-      <div class="host-grid">
-        <div class="host-card">
-          <div class="side">신랑측</div>
-          <div class="names-txt">
-            김태호 · 박선영<br>
-            <em>의 아들 </em>민준
+      <div class="family-grid">
+        <div class="family-card">
+          <div class="side-label">신랑측</div>
+          <div class="fnames">
+            김병철 · 권정희<br><em>의 장남 </em>민준
           </div>
         </div>
-        <div class="host-card">
-          <div class="side">신부측</div>
-          <div class="names-txt">
-            이동현 · 최미경<br>
-            <em>의 딸 </em>서연
+        <div class="family-card">
+          <div class="side-label">신부측</div>
+          <div class="fnames">
+            이종수 · 박미영<br><em>의 차녀 </em>서연
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- QR SECTION -->
-    <div class="qr-section">
-      <div class="section-label" style="margin-bottom: 16px;">— 모바일 청첩장 —</div>
-      <div class="qr-box">
-        <div class="qr-placeholder">
-          <!-- QR 코드 이미지를 여기에 교체하세요 -->
-          <!-- <img src="qr.png" alt="청첩장 QR 코드" style="width:100%;height:100%;object-fit:contain;"> -->
-          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="80" height="80" aria-label="QR 코드 자리">
-            <rect x="5" y="5" width="35" height="35" rx="4" fill="none" stroke="#c47d68" stroke-width="3"/>
-            <rect x="13" y="13" width="19" height="19" rx="2" fill="#c47d68" opacity="0.3"/>
-            <rect x="60" y="5" width="35" height="35" rx="4" fill="none" stroke="#c47d68" stroke-width="3"/>
-            <rect x="68" y="13" width="19" height="19" rx="2" fill="#c47d68" opacity="0.3"/>
-            <rect x="5" y="60" width="35" height="35" rx="4" fill="none" stroke="#c47d68" stroke-width="3"/>
-            <rect x="13" y="68" width="19" height="19" rx="2" fill="#c47d68" opacity="0.3"/>
-            <rect x="60" y="60" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-            <rect x="72" y="60" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-            <rect x="84" y="60" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-            <rect x="60" y="72" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-            <rect x="84" y="72" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-            <rect x="60" y="84" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-            <rect x="72" y="84" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-            <rect x="84" y="84" width="8" height="8" fill="#c47d68" opacity="0.5"/>
-          </svg>
+  <!-- ── 2. 축하연락처 ── -->
+  <div class="section" id="sec-phone">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
+    </div>
+    <div class="section-title-row">
+      <svg class="title-deco" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">축하 연락처</span>
+    </div>
+    <div class="section-body">
+      <div class="contact-group">
+        <div class="contact-group-label">신랑측</div>
+        <div class="contact-row">
+          <div class="contact-name"><span>신랑</span>김민준</div>
+          <div class="contact-btns">
+            <a class="contact-icon" href="tel:01000000000" aria-label="전화">📞</a>
+            <a class="contact-icon" href="sms:01000000000" aria-label="문자">💬</a>
+          </div>
         </div>
-        <div class="qr-label">
-          QR 코드를 스캔하면<br>
-          청첩장으로 바로 연결됩니다
+        <div class="contact-row">
+          <div class="contact-name"><span>아버님</span>김병철</div>
+          <div class="contact-btns">
+            <a class="contact-icon" href="tel:01000000000" aria-label="전화">📞</a>
+            <a class="contact-icon" href="sms:01000000000" aria-label="문자">💬</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-name"><span>어머님</span>권정희</div>
+          <div class="contact-btns">
+            <a class="contact-icon" href="tel:01000000000" aria-label="전화">📞</a>
+            <a class="contact-icon" href="sms:01000000000" aria-label="문자">💬</a>
+          </div>
         </div>
       </div>
-      <p style="font-size: 11px; color: #b4a09a; letter-spacing: 0.05em; margin-top: 14px; line-height: 1.8;">
-        배포 후 URL로 QR 생성 → qr.png로 저장<br>위 주석 부분을 img 태그로 교체하세요
-      </p>
-    </div>
-
-    <div class="inv-footer">
-      <div class="f-en">Together Forever</div>
-      <div class="f-date">2026 · 09 · 19 · SAT · 11:00 AM</div>
+      <div class="contact-group">
+        <div class="contact-group-label">신부측</div>
+        <div class="contact-row">
+          <div class="contact-name"><span>신부</span>이서연</div>
+          <div class="contact-btns">
+            <a class="contact-icon" href="tel:01000000000" aria-label="전화">📞</a>
+            <a class="contact-icon" href="sms:01000000000" aria-label="문자">💬</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-name"><span>아버님</span>이종수</div>
+          <div class="contact-btns">
+            <a class="contact-icon" href="tel:01000000000" aria-label="전화">📞</a>
+            <a class="contact-icon" href="sms:01000000000" aria-label="문자">💬</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-name"><span>어머님</span>박미영</div>
+          <div class="contact-btns">
+            <a class="contact-icon" href="tel:01000000000" aria-label="전화">📞</a>
+            <a class="contact-icon" href="sms:01000000000" aria-label="문자">💬</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- TAB: 갤러리 -->
-  <div id="pane-gallery" class="tab-pane" role="tabpanel">
-    <div class="gallery-header">
-      <div class="section-label">— Our Story —</div>
+  <!-- ── 3. 날짜 ── -->
+  <div class="section" id="sec-calendar">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
     </div>
+    <div class="section-title-row">
+      <svg class="title-deco" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">날짜를 확인하세요</span>
+    </div>
+    <div class="section-body-radius">
+      <div class="calendar-wrap">
+        <div class="calendar-ym">2026.09</div>
+        <table class="calendar-table">
+          <thead>
+            <tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+            </tr>
+            <tr>
+              <td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+            </tr>
+            <tr>
+              <td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td class="dday"><span>19</span></td><td>20</td>
+            </tr>
+            <tr>
+              <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+            </tr>
+            <tr>
+              <td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="dday-label">토요일 오전 11시</div>
+      </div>
+    </div>
+  </div>
 
+  <!-- ── 4. 갤러리 ── -->
+  <div class="section" id="sec-photo">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
+    </div>
+    <div class="section-title-row" style="margin-bottom: 16px;">
+      <svg class="title-deco" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">갤러리</span>
+    </div>
     <div class="gallery-grid">
-      <div class="photo wide">
+      <div class="g-photo wide">
         <svg viewBox="0 0 430 188" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs><linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#dfc5ba"/><stop offset="100%" stop-color="#c4a090"/></linearGradient></defs>
-          <rect width="430" height="188" fill="url(#pg1)"/>
-          <ellipse cx="120" cy="90" rx="70" ry="50" fill="#b87060" opacity="0.25"/>
-          <ellipse cx="310" cy="110" rx="75" ry="55" fill="#c48070" opacity="0.25"/>
-          <text x="215" y="85" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="26" font-style="italic" font-weight="300" fill="#6a3a2a" opacity="0.55">Our First Date</text>
-          <text x="215" y="112" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="12" font-weight="300" fill="#6a3a2a" opacity="0.45">2023년 봄, 경복궁</text>
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#dfc5ba"/><stop offset="100%" stop-color="#c4a090"/></linearGradient></defs>
+          <rect width="430" height="188" fill="url(#g1)"/>
+          <ellipse cx="120" cy="90" rx="70" ry="50" fill="#b87060" opacity="0.22"/>
+          <ellipse cx="310" cy="110" rx="75" ry="55" fill="#c48070" opacity="0.22"/>
+          <text x="215" y="85" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="26" font-style="italic" font-weight="300" fill="#6a3a2a" opacity="0.52">Our First Date</text>
+          <text x="215" y="112" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="12" font-weight="300" fill="#6a3a2a" opacity="0.42">2023년 봄, 경복궁</text>
         </svg>
       </div>
-      <div class="photo tall">
+      <div class="g-photo tall">
         <svg viewBox="0 0 213 284" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs><linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4b8ac"/><stop offset="100%" stop-color="#c09080"/></linearGradient></defs>
-          <rect width="213" height="284" fill="url(#pg2)"/>
-          <ellipse cx="106" cy="142" rx="55" ry="75" fill="#b87060" opacity="0.28"/>
-          <text x="106" y="130" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="18" font-style="italic" fill="#6a3a2a" opacity="0.55">Proposal</text>
-          <text x="106" y="154" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="11" font-weight="300" fill="#6a3a2a" opacity="0.45">2025년 봄</text>
+          <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4b8ac"/><stop offset="100%" stop-color="#c09080"/></linearGradient></defs>
+          <rect width="213" height="284" fill="url(#g2)"/>
+          <ellipse cx="106" cy="142" rx="55" ry="75" fill="#b87060" opacity="0.25"/>
+          <text x="106" y="132" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="18" font-style="italic" fill="#6a3a2a" opacity="0.52">Proposal</text>
+          <text x="106" y="155" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="11" font-weight="300" fill="#6a3a2a" opacity="0.42">2025년 봄</text>
         </svg>
       </div>
-      <div class="photo tall">
+      <div class="g-photo tall">
         <svg viewBox="0 0 213 284" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs><linearGradient id="pg3" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dcc0b0"/><stop offset="100%" stop-color="#c8a090"/></linearGradient></defs>
-          <rect width="213" height="284" fill="url(#pg3)"/>
-          <ellipse cx="106" cy="130" rx="50" ry="65" fill="#c08070" opacity="0.28"/>
-          <text x="106" y="130" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="18" font-style="italic" fill="#6a3a2a" opacity="0.55">Together</text>
-          <text x="106" y="154" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="11" font-weight="300" fill="#6a3a2a" opacity="0.45">2024년 가을</text>
+          <defs><linearGradient id="g3" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dcc0b0"/><stop offset="100%" stop-color="#c8a090"/></linearGradient></defs>
+          <rect width="213" height="284" fill="url(#g3)"/>
+          <ellipse cx="106" cy="130" rx="50" ry="65" fill="#c08070" opacity="0.25"/>
+          <text x="106" y="132" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="18" font-style="italic" fill="#6a3a2a" opacity="0.52">Together</text>
+          <text x="106" y="155" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="11" font-weight="300" fill="#6a3a2a" opacity="0.42">2024년 가을</text>
         </svg>
       </div>
-      <div class="photo wide">
+      <div class="g-photo wide">
         <svg viewBox="0 0 430 188" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs><linearGradient id="pg4" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d0b8ac"/><stop offset="100%" stop-color="#b89080"/></linearGradient></defs>
-          <rect width="430" height="188" fill="url(#pg4)"/>
-          <ellipse cx="160" cy="95" rx="80" ry="55" fill="#a87060" opacity="0.25"/>
-          <ellipse cx="270" cy="90" rx="70" ry="50" fill="#b88070" opacity="0.25"/>
-          <text x="215" y="85" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="24" font-style="italic" font-weight="300" fill="#6a3a2a" opacity="0.55">Engagement</text>
-          <text x="215" y="112" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="12" font-weight="300" fill="#6a3a2a" opacity="0.45">2025년 여름, 제주도</text>
+          <defs><linearGradient id="g4" x1="1" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d0b8ac"/><stop offset="100%" stop-color="#b89080"/></linearGradient></defs>
+          <rect width="430" height="188" fill="url(#g4)"/>
+          <ellipse cx="160" cy="95" rx="80" ry="55" fill="#a87060" opacity="0.22"/>
+          <ellipse cx="270" cy="90" rx="70" ry="50" fill="#b88070" opacity="0.22"/>
+          <text x="215" y="85" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="24" font-style="italic" font-weight="300" fill="#6a3a2a" opacity="0.52">Engagement</text>
+          <text x="215" y="112" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="12" font-weight="300" fill="#6a3a2a" opacity="0.42">2025년 여름, 제주도</text>
         </svg>
       </div>
     </div>
-
-    <div class="gallery-footer">
-      <p class="gallery-note">
-        실제 웨딩 사진을 준비하면<br>
-        SVG 자리에 &lt;img&gt; 태그로 교체해 주세요
-      </p>
-    </div>
+    <p class="gallery-note">사진을 교체하시려면 &lt;img&gt; 태그로 SVG를 대체해 주세요</p>
   </div>
 
-  <!-- TAB: 오시는 길 -->
-  <div id="pane-location" class="tab-pane" role="tabpanel">
-    <div class="loc-header">
-      <div class="section-label">— 오시는 길 —</div>
-      <div class="loc-name">그랜드 인터컨티넨탈 서울 파르나스</div>
-      <div class="loc-addr">서울특별시 강남구 테헤란로 521<br>그랜드볼룸 3층</div>
+  <!-- ── 5. 오시는 길 ── -->
+  <div class="section" id="sec-map">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
     </div>
-
-    <div class="map-wrap">
-      <div class="map-box">
-        <div class="map-inner">
-          <svg viewBox="0 0 390 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <rect width="390" height="210" fill="#ede4dc"/>
-            <g fill="#d4c4b8" stroke="#c8b4a4" stroke-width="0.5">
-              <rect x="18" y="28" width="62" height="32" rx="2"/>
-              <rect x="98" y="18" width="82" height="26" rx="2"/>
-              <rect x="198" y="33" width="57" height="42" rx="2"/>
-              <rect x="268" y="14" width="52" height="36" rx="2"/>
-              <rect x="22" y="78" width="47" height="52" rx="2"/>
-              <rect x="82" y="73" width="67" height="47" rx="2"/>
-              <rect x="162" y="83" width="52" height="42" rx="2"/>
-              <rect x="228" y="78" width="62" height="57" rx="2"/>
-              <rect x="18" y="152" width="72" height="37" rx="2"/>
-              <rect x="108" y="147" width="57" height="42" rx="2"/>
-              <rect x="178" y="150" width="67" height="40" rx="2"/>
-              <rect x="262" y="152" width="52" height="37" rx="2"/>
-            </g>
-            <line x1="0" y1="63" x2="390" y2="63" stroke="#c8b0a0" stroke-width="6" opacity="0.45"/>
-            <line x1="0" y1="137" x2="390" y2="137" stroke="#c8b0a0" stroke-width="5" opacity="0.45"/>
-            <line x1="153" y1="0" x2="153" y2="210" stroke="#c8b0a0" stroke-width="6" opacity="0.4"/>
-            <circle cx="195" cy="100" r="32" fill="#c47d68" opacity="0.12"/>
-            <circle cx="195" cy="100" r="16" fill="#c47d68" opacity="0.85"/>
-            <circle cx="195" cy="100" r="7" fill="white"/>
-            <text x="195" y="80" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="10" fill="#6a3a2a" font-weight="300">인터컨티넨탈</text>
-          </svg>
-        </div>
-        <div class="map-footer">
-          <div class="map-footer-txt">삼성역 5번 출구 도보 1분</div>
-          <a class="map-btn" href="https://map.kakao.com/link/search/그랜드인터컨티넨탈서울파르나스" target="_blank" rel="noopener">
-            길 찾기 →
-          </a>
-        </div>
+    <div class="section-title-row" style="margin-bottom: 14px;">
+      <svg class="title-deco" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">오시는 길</span>
+    </div>
+    <div class="map-address-block">
+      <div class="map-venue-name">그랜드 인터컨티넨탈 서울 파르나스</div>
+      <div class="map-road">서울특별시 강남구 테헤란로 521<br>그랜드볼룸 3층</div>
+      <a class="map-tel-btn" href="tel:02-555-5656">📞 02-555-5656</a>
+    </div>
+    <div class="map-box">
+      <div class="map-tab-row">
+        <button class="map-tab active" onclick="mapTab('online',this)">지도</button>
+        <button class="map-tab" onclick="mapTab('yakdo',this)">약도</button>
+      </div>
+      <div id="map-online" class="map-inner">
+        <svg viewBox="0 0 390 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-label="약식 지도">
+          <rect width="390" height="200" fill="#ede4dc"/>
+          <g fill="#d4c4b8" stroke="#c8b4a4" stroke-width="0.5">
+            <rect x="18" y="25" width="64" height="34" rx="2"/>
+            <rect x="100" y="16" width="84" height="28" rx="2"/>
+            <rect x="200" y="30" width="58" height="44" rx="2"/>
+            <rect x="268" y="12" width="54" height="38" rx="2"/>
+            <rect x="22" y="76" width="48" height="54" rx="2"/>
+            <rect x="82" y="70" width="68" height="50" rx="2"/>
+            <rect x="162" y="80" width="54" height="44" rx="2"/>
+            <rect x="228" y="76" width="64" height="58" rx="2"/>
+            <rect x="18" y="150" width="74" height="38" rx="2"/>
+            <rect x="108" y="144" width="58" height="44" rx="2"/>
+            <rect x="178" y="147" width="68" height="42" rx="2"/>
+            <rect x="264" y="150" width="54" height="38" rx="2"/>
+          </g>
+          <line x1="0" y1="61" x2="390" y2="61" stroke="#c8b0a0" stroke-width="6" opacity="0.42"/>
+          <line x1="0" y1="136" x2="390" y2="136" stroke="#c8b0a0" stroke-width="5" opacity="0.42"/>
+          <line x1="152" y1="0" x2="152" y2="200" stroke="#c8b0a0" stroke-width="6" opacity="0.38"/>
+          <circle cx="192" cy="98" r="34" fill="#c47d68" opacity="0.10"/>
+          <circle cx="192" cy="98" r="17" fill="#c47d68" opacity="0.82"/>
+          <circle cx="192" cy="98" r="7.5" fill="white"/>
+          <text x="192" y="77" text-anchor="middle" font-family="Noto Serif KR,serif" font-size="10" fill="#6a3a2a" font-weight="300">인터컨티넨탈</text>
+        </svg>
+      </div>
+      <div id="map-yakdo" class="map-inner" style="display:none; align-items:center; justify-content:center;">
+        <div style="text-align:center; font-size:13px; color:#9e7b6a; font-weight:300; letter-spacing:0.05em; padding:20px;">약도 이미지를<br>여기에 업로드해 주세요</div>
+      </div>
+      <div class="map-navi-row">
+        <a class="navi-btn" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&name=%EA%B7%B8%EB%9E%9C%EB%93%9C%EC%9D%B8%ED%84%B0%EC%BB%A8%ED%8B%B0%EB%84%90%EC%84%9C%EC%9A%B8%ED%8C%8C%EB%A5%B4%EB%82%98%EC%8A%A4&lon=127.0596&lat=37.5087" target="_blank">
+          <div class="navi-icon" style="background:#2b7ff5; color:#fff; font-size:14px; font-weight:700; font-family:sans-serif;">T</div>
+          <span class="navi-label">티맵</span>
+        </a>
+        <a class="navi-btn" href="https://map.kakao.com/link/to/그랜드인터컨티넨탈서울파르나스,37.5087,127.0596" target="_blank">
+          <div class="navi-icon" style="background:#FEE500; font-size:14px; font-weight:700; font-family:sans-serif; color:#3C1E1E;">K</div>
+          <span class="navi-label">카카오</span>
+        </a>
+        <a class="navi-btn" href="https://map.naver.com/?menu=location&pinType=place&lat=37.5087&lng=127.0596&title=%EA%B7%B8%EB%9E%9C%EB%93%9C%EC%9D%B8%ED%84%B0%EC%BB%A8%ED%8B%B0%EB%84%90%EC%84%9C%EC%9A%B8%ED%8C%8C%EB%A5%B4%EB%82%98%EC%8A%A4" target="_blank">
+          <div class="navi-icon" style="background:#03C75A; color:#fff; font-size:14px; font-weight:700; font-family:sans-serif;">N</div>
+          <span class="navi-label">네이버</span>
+        </a>
       </div>
     </div>
-
     <div class="transport-grid">
       <div class="t-card">
         <div class="t-type">🚇 지하철</div>
         <div class="t-desc">2호선 삼성역<br>5번 출구 도보 1분</div>
       </div>
       <div class="t-card">
-        <div class="t-type">🚗 자가용</div>
-        <div class="t-desc">테헤란로 521<br>주차장 이용 가능</div>
-      </div>
-      <div class="t-card">
         <div class="t-type">🚌 버스</div>
         <div class="t-desc">삼성역 정류장<br>143 · 401 · 3412</div>
       </div>
       <div class="t-card">
-        <div class="t-type">📞 문의</div>
-        <div class="t-desc">신랑 010-1234-5678<br>신부 010-8765-4321</div>
+        <div class="t-type">🚗 자가용</div>
+        <div class="t-desc">테헤란로 521<br>주차 가능</div>
+      </div>
+      <div class="t-card">
+        <div class="t-type">📞 예식장</div>
+        <div class="t-desc">02-555-5656</div>
       </div>
     </div>
   </div>
 
-</div>
+  <!-- ── 6. 안내사항 ── -->
+  <div class="section" id="sec-notice">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
+    </div>
+    <div class="section-title-row">
+      <svg class="title-deco" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">안내사항</span>
+    </div>
+    <div class="section-body-radius">
+      <div class="notice-list">
+        <div class="notice-row">
+          <div class="notice-no">01</div>
+          <div class="notice-content">
+            <div class="notice-title">화환</div>
+            <div class="notice-msg">화환은 적극 환영합니다</div>
+          </div>
+        </div>
+        <div class="notice-row">
+          <div class="notice-no">02</div>
+          <div class="notice-content">
+            <div class="notice-title">알러지</div>
+            <div class="notice-msg">땅콩이 함유된 음식이 포함되어 있습니다. 피로연 출입 전 말씀해주시면 전용석으로 안내드립니다</div>
+          </div>
+        </div>
+        <div class="notice-row">
+          <div class="notice-no">03</div>
+          <div class="notice-content">
+            <div class="notice-title">답례품</div>
+            <div class="notice-msg">피로연 출구에 작은 선물을 준비했습니다. 잊지 마시고 챙겨가세요</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 7. 축하의 마음 전하기 (계좌번호) ── -->
+  <div class="section" id="sec-bank">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
+    </div>
+    <div class="section-title-row">
+      <svg class="title-deco" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">축하의 마음 전하기</span>
+    </div>
+    <div class="section-body">
+      <p class="bank-desc">축하의 마음을 담아 축의금을 전달해 보세요.<br>복사 버튼을 클릭해 계좌번호를 복사할 수 있습니다</p>
+
+      <div class="bank-group">
+        <div class="bank-group-label">신랑측</div>
+        <div class="bank-row" id="bank-a1">
+          <div class="bank-row-header" onclick="toggleBank('bank-a1')">
+            <div class="bank-name-col"><span>신랑</span>김민준</div>
+            <div class="bank-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="bank-detail">
+            <div class="bank-info">
+              <div class="bank-label">국민은행</div>
+              <div class="bank-num">123-456789-123</div>
+            </div>
+            <button class="bank-copy-btn" onclick="copyBank(this,'123-456789-123')">복사</button>
+          </div>
+        </div>
+        <div class="bank-row" id="bank-a2">
+          <div class="bank-row-header" onclick="toggleBank('bank-a2')">
+            <div class="bank-name-col"><span>부)</span>김병철</div>
+            <div class="bank-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="bank-detail">
+            <div class="bank-info">
+              <div class="bank-label">우리은행</div>
+              <div class="bank-num">123-456789-123</div>
+            </div>
+            <button class="bank-copy-btn" onclick="copyBank(this,'123-456789-123')">복사</button>
+          </div>
+        </div>
+        <div class="bank-row" id="bank-a3">
+          <div class="bank-row-header" onclick="toggleBank('bank-a3')">
+            <div class="bank-name-col"><span>모)</span>권정희</div>
+            <div class="bank-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="bank-detail">
+            <div class="bank-info">
+              <div class="bank-label">신한은행</div>
+              <div class="bank-num">123-456789-123</div>
+            </div>
+            <button class="bank-copy-btn" onclick="copyBank(this,'123-456789-123')">복사</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-group">
+        <div class="bank-group-label">신부측</div>
+        <div class="bank-row" id="bank-b1">
+          <div class="bank-row-header" onclick="toggleBank('bank-b1')">
+            <div class="bank-name-col"><span>신부</span>이서연</div>
+            <div class="bank-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="bank-detail">
+            <div class="bank-info">
+              <div class="bank-label">하나은행</div>
+              <div class="bank-num">123-456789-123</div>
+            </div>
+            <button class="bank-copy-btn" onclick="copyBank(this,'123-456789-123')">복사</button>
+          </div>
+        </div>
+        <div class="bank-row" id="bank-b2">
+          <div class="bank-row-header" onclick="toggleBank('bank-b2')">
+            <div class="bank-name-col"><span>부)</span>이종수</div>
+            <div class="bank-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="bank-detail">
+            <div class="bank-info">
+              <div class="bank-label">SC제일은행</div>
+              <div class="bank-num">123-456789-123</div>
+            </div>
+            <button class="bank-copy-btn" onclick="copyBank(this,'123-456789-123')">복사</button>
+          </div>
+        </div>
+        <div class="bank-row" id="bank-b3">
+          <div class="bank-row-header" onclick="toggleBank('bank-b3')">
+            <div class="bank-name-col"><span>모)</span>박미영</div>
+            <div class="bank-arrow"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="bank-detail">
+            <div class="bank-info">
+              <div class="bank-label">카카오뱅크</div>
+              <div class="bank-num">123-456789-123</div>
+            </div>
+            <button class="bank-copy-btn" onclick="copyBank(this,'123-456789-123')">복사</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 8. 소식공유 ── -->
+  <div class="section" id="sec-share">
+    <div class="section-header">
+      <span class="sh-invit">wedding invitation</span>
+      <span class="sh-date">date.</span>
+      <span class="sh-num">09/19</span>
+    </div>
+    <div class="section-title-row">
+      <svg class="title-deco" viewBox="0 0 22 22" aria-hidden="true">
+        <circle cx="11" cy="11" r="4.5" fill="#d4a090"/>
+        <ellipse cx="11" cy="3.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="11" cy="18.5" rx="3.5" ry="5.5" fill="#f2c4b5"/>
+        <ellipse cx="3.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+        <ellipse cx="18.5" cy="11" rx="5.5" ry="3.5" fill="#f2c4b5"/>
+      </svg>
+      <span class="title-text">소식공유</span>
+    </div>
+    <div class="section-body" style="padding-bottom: 24px;">
+      <div class="share-row">
+        <button class="share-btn" onclick="shareKakao()">
+          <svg viewBox="0 0 24 24" fill="#FEE500"><path d="M12 3C6.48 3 2 6.69 2 11.25c0 2.85 1.68 5.37 4.25 6.92L5.25 21l3.54-1.83A11.4 11.4 0 0012 19.5c5.52 0 10-3.69 10-8.25S17.52 3 12 3z"/></svg>
+          카카오톡 공유
+        </button>
+        <button class="share-btn" onclick="shareURL()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f5ede6" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          링크 복사
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="inv-footer">
+    <div class="f-en">Together Forever</div>
+    <div class="f-date">2026 · 09 · 19 · SAT · 11:00 AM</div>
+  </div>
+
+</div><!-- /wrapper -->
+
+<div id="toast"></div>
 
 <script>
-  function switchTab(name, btn) {
-    document.querySelectorAll('.tab-pane').forEach(function(p) { p.classList.remove('active'); });
-    document.querySelectorAll('.tab-btn').forEach(function(b) {
-      b.classList.remove('active');
-      b.setAttribute('aria-selected', 'false');
-    });
-    document.getElementById('pane-' + name).classList.add('active');
-    btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
+// BGM
+var bgmPlaying = false;
+var bgmAudio = document.getElementById('bgm-audio');
+var bgmTimer = null;
+
+function toggleBgm() {
+  if (bgmPlaying) {
+    bgmAudio.pause();
+    bgmPlaying = false;
+    document.getElementById('bgm-icon-play').style.display = '';
+    document.getElementById('bgm-icon-pause').style.display = 'none';
+    clearInterval(bgmTimer);
+  } else {
+    bgmAudio.play().then(function(){
+      bgmPlaying = true;
+      document.getElementById('bgm-icon-play').style.display = 'none';
+      document.getElementById('bgm-icon-pause').style.display = '';
+      bgmTimer = setInterval(function(){
+        if (bgmAudio.duration) {
+          var pct = (bgmAudio.currentTime / bgmAudio.duration) * 100;
+          document.getElementById('bgm-played').style.width = pct.toFixed(1) + '%';
+        }
+      }, 1000);
+    }).catch(function(){});
   }
+}
+
+// MAP TAB
+function mapTab(name, btn) {
+  document.querySelectorAll('.map-tab').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('map-online').style.display = name === 'online' ? 'block' : 'none';
+  document.getElementById('map-yakdo').style.display  = name === 'yakdo'  ? 'flex'  : 'none';
+}
+
+// BANK TOGGLE
+function toggleBank(id) {
+  var el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// COPY
+function copyBank(btn, num) {
+  navigator.clipboard.writeText(num).then(function(){
+    btn.textContent = '복사됨';
+    btn.classList.add('copied');
+    showToast('계좌번호가 복사되었습니다');
+    setTimeout(function(){ btn.textContent = '복사'; btn.classList.remove('copied'); }, 2000);
+  }).catch(function(){
+    showToast('복사에 실패했습니다');
+  });
+}
+
+// TOAST
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2200);
+}
+
+// SHARE
+function shareKakao() {
+  showToast('카카오톡 SDK 연동 후 사용 가능합니다');
+}
+function shareURL() {
+  navigator.clipboard.writeText(location.href).then(function(){
+    showToast('링크가 복사되었습니다');
+  }).catch(function(){
+    showToast('링크 복사에 실패했습니다');
+  });
+}
 </script>
 
 </body>
